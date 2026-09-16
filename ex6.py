@@ -13,7 +13,7 @@ X = np.column_stack((np.ones(len(X_raw)), X_raw))
 
 
 X_T = X.T # Транспонированная матрица
-X_T_X_inv = np.linalg.inv(X_T.dot(X)) # Обратная матрица от (X^T * X)
+X_T_X_inv = np.linalg.inv(X_T.dot(X)) # Обратная матрица от(X^T * X)
 w_array = X_T_X_inv.dot(X_T).dot(Y) # перемножение матрий
 
 w = tuple(w_array)
