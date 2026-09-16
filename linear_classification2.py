@@ -11,11 +11,11 @@ xxt = np.sum([np.outer(x, x) for x in x_train], axis=0)
 w = np.dot(pt, np.linalg.inv(xxt))
 print(w)
 
-line_x = list(range(max(x_train[:, 0])))    # формирование графика разделяющей линии
+line_x = list(range(max(x_train[:, 0])))    # график разделяющей линии
 line_y = [-x*w[0]/w[1] - w[2]/w[1] for x in line_x]
 
-x_0 = x_train[y_train == 1]                 # формирование точек для 1-го
-x_1 = x_train[y_train == -1]                # и 2-го классов
+x_0 = x_train[y_train == 1]                 # точки для 1-го
+x_1 = x_train[y_train == -1]                # точки для 2-го классов
 
 plt.scatter(x_0[:, 0], x_0[:, 1], color='red')
 plt.scatter(x_1[:, 0], x_1[:, 1], color='blue')
