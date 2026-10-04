@@ -38,5 +38,5 @@ for _ in range(N):
 
 Q = sum([1 for x,y in zip(x_train,y_train) if np.dot(x,w) < 0])/ n_train
 w = w.tolist()
-print(Q)
+
 
